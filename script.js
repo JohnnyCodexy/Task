@@ -1,4 +1,4 @@
-/*Selectors for the progres bar*/
+/*Selectors for the progress bar*/
 const percentage = document.getElementById("percentage");
 const percentage25 = document.getElementById("percentage1");
 const percentage50 = document.getElementById("percentage2");
