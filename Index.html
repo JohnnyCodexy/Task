@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="split20">
+          <div class="chart" id="percentage" data-percent="0"></div>
+          <div class="chart hidden" id="percentage1" data-percent="25"></div>
+          <div class="chart hidden" id="percentage2" data-percent="50"></div>
+          <div class="chart hidden" id="percentage3" data-percent="75"></div>
+          <svg
+            id="percentageCheck"
+            class="checkmark-large hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="30"
+              cy="30"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
+        </div>
+        <div class="split80">
+          <p class="smalltext">New York State</p>
+          <p class="biggertext">Request for Contact</p>
+        </div>
+      </div>
+      <form id="form">
+        <div class="element">
+          <div class="split20">
+            <div id="number1" class="circle">1</div>
+            <svg
+              id="checkmarkFname"
+              class="checkmark hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+          <div class="split80">
+            <label for="fname">First name:</label>
+            <input
+              type="text"
+              class="awsome_input"
+              id="fname"
+              name="fname"
+              required
+            />
+            <span class="awsome_input_border"></span>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="split20">
+            <div id="number2" class="circle">2</div>
+            <svg
+              id="checkmarkLname"
+              class="checkmark hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+          <div class="split80">
+            <label for="lname">Last name:</label>
+            <input class="awsome_input" type="text" id="lname" name="lname" />
+            <span class="awsome_input_border"></span>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="split20">
+            <div id="number3" class="circle">3</div>
+            <svg
+              id="checkmarkEmail"
+              class="checkmark hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+          <div class="split80">
+            <label for="lname">Email</label>
+            <input class="awsome_input" type="email" id="email" name="lname" />
+            <span class="awsome_input_border"></span>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="split20">
+            <div id="number4" class="circle">4</div>
+            <svg
+              id="checkmark-chekbox"
+              class="checkmark hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                class="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                class="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+          <div class="split80">
+            <p class="question">What is the best time to contact you?</p>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="split20"></div>
+          <div class="split80">
+            <div>
+              <input
+                id="checkbox1"
+                type="checkbox"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="checkbox1"> Monday 3pm</label><br />
+              <br />
+              <input
+                type="checkbox"
+                id="checkbox2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="checkbox2"> Tuesday 3pm</label><br />
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="split20"></div>
+          <div class="split80"><button disabled>Submit</button></div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

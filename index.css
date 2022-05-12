@@ -1,0 +1,319 @@
+/*General styling*/
+
+* {
+  font-family: "Roboto";
+  margin: 0;
+}
+
+body {
+  background-color: rgb(60, 126, 171);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 10%;
+  width: 400px;
+  color: rgb(155, 147, 140);
+  padding: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.header {
+  background-color: rgb(33, 150, 243);
+  color: white;
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+  resize: none;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.smalltext {
+  font-size: 0.75rem;
+  margin-top: 3%;
+}
+
+.biggertext {
+  font-size: 1.25rem;
+}
+
+.element {
+  padding-top: 5%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+  resize: none;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.split20 {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.split80 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  resize: none;
+}
+
+.footer {
+  margin-top: -5%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  padding-right: 5%;
+  resize: none;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+/*Styling inputs and labels*/
+
+input {
+  border: none;
+  border-bottom: 1px solid rgb(237, 237, 237);
+  background-color: transparent;
+  width: auto;
+  font-size: 1.25rem;
+}
+
+input:focus {
+  outline: none;
+}
+label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+/* Styling inputs - input animation*/
+.awsome_input {
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+}
+
+.awsome_input_border {
+  width: 70%;
+  height: 1px;
+  background: rgb(214, 212, 214);
+
+  top: -5px;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.awsome_input:hover + .awsome_input_border,
+.awsome_input:active + .awsome_input_border,
+.awsome_input:focus + .awsome_input_border {
+  width: 100%;
+  background: rgb(33, 150, 243);
+}
+
+/*Styling checkbox and question*/
+.question {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+.label-checkbox {
+  padding-bottom: 5%;
+}
+
+input[type="checkbox"] {
+  width: 1.2em;
+  height: 1.2em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: rgb(122, 193, 66);
+}
+
+/* Checkmark animation*/
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark-large {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+
+/* Styling circles with numbers in them  */
+.circle {
+  box-shadow: 1px 2px 2px;
+  display: inline;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: solid 1px #dae4faa1;
+  color: rgb(155, 149, 140);
+  text-align: center;
+  font-size: small;
+}
+
+.circle-large {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  text-align: center;
+}
+
+/*Styling button*/
+
+button {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 50%;
+  padding: 3%;
+  width: 50%;
+  background-color: rgb(122, 193, 66);
+  border: none;
+  font-size: 1rem;
+  color: rgb(237, 237, 237);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px;
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+/* Styling progress bar*/
+.box {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+
+.box h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.box .chart {
+  width: 90%;
+  height: 90%;
+
+  font-size: 40px;
+  line-height: 160px;
+  color: #fff;
+}
+
+/*Helper classes*/
+.hidden {
+  display: none;
+}
+
+/*Media query */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin-top: 0%;
+    width: 90%;
+  }
+  .header {
+    margin-top: 17%;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .container {
+    margin-top: 0%;
+    width: 100%;
+  }
+  .header {
+    margin-top: 0;
+  }
+}
